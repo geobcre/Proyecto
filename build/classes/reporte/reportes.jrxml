@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportes" language="groovy" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="d7936044-17a9-4351-80be-84e8c4a72092">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[SELECT
+     cafeteriahansel.`codigo` AS cafeteriahansel_codigo,
+     cafeteriahansel.`nombre` AS cafeteriahansel_nombre,
+     cafeteriahansel.`precio` AS cafeteriahansel_precio,
+     cafeteriahansel.`cantidad` AS cafeteriahansel_cantidad
+FROM
+     `cafeteriahansel` cafeteriahansel]]>
+	</queryString>
+	<field name="cafeteriahansel_codigo" class="java.lang.Integer"/>
+	<field name="cafeteriahansel_nombre" class="java.lang.String"/>
+	<field name="cafeteriahansel_precio" class="java.lang.Integer"/>
+	<field name="cafeteriahansel_cantidad" class="java.lang.Integer"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="55" splitType="Stretch">
+			<staticText>
+				<reportElement x="227" y="23" width="116" height="20" uuid="27d4a340-d348-4fb5-b24f-882e351e4ecf"/>
+				<text><![CDATA[Reporte de Productos]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="37" splitType="Stretch">
+			<staticText>
+				<reportElement x="41" y="2" width="100" height="20" uuid="2b33575c-679b-4d51-ba2f-aad78bcf6bea"/>
+				<text><![CDATA[codigo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="190" y="2" width="100" height="20" uuid="5309c22d-2119-400e-8361-f4a8d3ce6dba"/>
+				<text><![CDATA[nombre]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="330" y="2" width="100" height="20" uuid="9ff3f72f-95ae-41e5-b869-8b02e2c16af9"/>
+				<text><![CDATA[precio]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="472" y="2" width="100" height="20" uuid="1d81d8f1-9e19-4c32-8118-c0573eba637e"/>
+				<text><![CDATA[cantidad]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="37" splitType="Stretch">
+			<textField>
+				<reportElement x="41" y="10" width="100" height="20" uuid="6ebe3b13-7376-4673-9e64-a55d784f0c3a"/>
+				<textFieldExpression><![CDATA[$F{cafeteriahansel_codigo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="190" y="10" width="100" height="20" uuid="da5aff85-9488-4682-ac45-1bf5a2f0a5c8"/>
+				<textFieldExpression><![CDATA[$F{cafeteriahansel_nombre}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="330" y="10" width="100" height="20" uuid="89c458fa-3149-4e5c-b906-d82596213265"/>
+				<textFieldExpression><![CDATA[$F{cafeteriahansel_precio}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="472" y="10" width="100" height="20" uuid="69a29c85-e3f5-4d84-a320-d8878aad9ead"/>
+				<textFieldExpression><![CDATA[$F{cafeteriahansel_cantidad}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="30" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="34" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="24" splitType="Stretch"/>
+	</summary>
+</jasperReport>
